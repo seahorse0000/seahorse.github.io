@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ICF - MENU</title>
+    <meta name="description" content="価値観リスト！">
+    <link rel="icon" type="image/png" href="images/ICF.png">
+　  <!-- CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  </head>
+
+  <body>
+    <div id="menu" class="big-bg">
+      <header class="page-header wrapper">
+        <h1><a href="index.html"><img  class="logo" src="images/migite.png" alt="value list"></a></h1>
+        <nav>
+          <ul class="main-nav">
+            <li><a href="index.html">top</a></li>
+            <li><a href="list.html">list</a></li>
+          </ul>
+        </nav>
+      </header>
+        <div class="home-content wrapper">
+          <h1>開発中です。</h1>
+          <br>
+          <span>バックエンド言語　主にjavascriptで作れるところまで作っています</span>
+        </div>
+
+        <div class="sample">
+          <p>サンプルページです。</p>
+
+          <label for="list">選択してください</label><br>
+          <select id="list" multiple size="5">
+            <option value="　受容　">受容：ありのままの自分を受け入れてもらう</option>
+            <option value="　正確　">正確：自分の意見や信念正しく伝える</option>
+            <option value="　達成　">達成：なにか重要なことを達成する</option>
+            <option value="　冒険　">冒険：新しくてワクワクする体験をする</option>
+            <option value="　魅力　">魅力：身体的な魅力を保つ</option>
+          </select>
+
+          <div>
+            <input type="button" value="Check" id="checkButton">
+          </div>
+
+          <script>
+            let listSelect = document.getElementById('list');
+            
+            function buttonClick(){
+              let selectOptions = listSelect.selectedOptions;
+
+              document.write('現在選択している項目は');
+              for (let i = 0 ; i < selectOptions.length ; i++){
+                document.write(selectOptions[i].value);
+              }
+              document.write('です。');
+            }
+
+            let checkButton = document.getElementById('checkButton');
+            checkButton.addEventListener('click', buttonClick);
+          </script>
+        </div>
+    </body>
+</html>
