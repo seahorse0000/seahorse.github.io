@@ -104,7 +104,7 @@ img {
   background-repeat: no-repeat;
 }
 #home {
-  background-image: url(images/ICF.png);
+  background-image: url(ICF.png);
   background-color: white;
   background-blend-mode: luminosity;
   min-height: 100vh;
